@@ -1,0 +1,475 @@
+Plecs {
+  Name          "Task 1 OL"
+  Version       "4.9"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  NonIdealSwitchResistance "1"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  DatatypeOverflowMsg "3"
+  DatatypeInheritanceConflictMsg "2"
+  ContSampleTimeConflictMsg "2"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  FixedPointDatatypeOverride "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  RemoveUnusedStateSpaceOutputs "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Schematic {
+    Location      [683, 23; 1366, 685]
+    ZoomFactor    1.14437
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          MosfetWithDiode
+      Name          "FETD"
+      Show          on
+      Position      [235, 90]
+      Direction     up
+      Flipped       off
+      LabelPosition southSouthwest
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          MosfetWithDiode
+      Name          "FETD1"
+      Show          on
+      Position      [235, 165]
+      Direction     up
+      Flipped       off
+      LabelPosition northNorthwest
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L"
+      Show          on
+      Position      [285, 120]
+      Direction     left
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "L"
+        Value         "80e-6"
+        Show          on
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Ammeter
+      Name          "iL"
+      Show          on
+      Position      [335, 120]
+      Direction     left
+      Flipped       off
+      LabelPosition south
+    }
+    Component {
+      Type          Capacitor
+      Name          "C"
+      Show          on
+      Position      [360, 160]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "C"
+        Value         "7.81e-6"
+        Show          on
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R"
+      Show          on
+      Position      [410, 160]
+      Direction     down
+      Flipped       off
+      LabelPosition west
+      Parameter {
+        Variable      "R"
+        Value         "3.2"
+        Show          on
+      }
+    }
+    Component {
+      Type          Voltmeter
+      Name          "Vout"
+      Show          on
+      Position      [445, 160]
+      Direction     up
+      Flipped       off
+      LabelPosition southSoutheast
+    }
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [410, 80]
+      Direction     up
+      Flipped       off
+      LabelPosition east
+      Location      [0, 23; 1366, 707]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAVWAAAAmfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQDAAAAAwAAAlYAAAVSAAAAgQAABVYAAAKRAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":100,\"FirstSecSize\":185,\"Labels\":["
+"\"Delta\"],\"VisualIdxs\":[3]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      Axes          "2"
+      TimeRange     "0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "Vin"
+      Show          on
+      Position      [120, 120]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "V"
+        Value         "16"
+        Show          on
+      }
+    }
+    Component {
+      Type          PulseGenerator
+      Name          "Pulse\nGenerator"
+      Show          on
+      Position      [135, 235]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Hi"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Lo"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "f"
+        Value         "100000"
+        Show          off
+      }
+      Parameter {
+        Variable      "DutyCycle"
+        Value         "0.5"
+        Show          off
+      }
+      Parameter {
+        Variable      "Delay"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          LogicalOperator
+      Name          "Logical\nOperator"
+      Show          on
+      Position      [185, 165]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Operator"
+        Value         "6"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "2"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Vin"
+      SrcTerminal   1
+      Points        [120, 70]
+      DstComponent  "FETD"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "FETD"
+      SrcTerminal   2
+      Points        [235, 120]
+      Branch {
+        DstComponent  "FETD1"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "L"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L"
+      SrcTerminal   2
+      DstComponent  "iL"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "iL"
+      SrcTerminal   2
+      Points        [360, 120]
+      Branch {
+        DstComponent  "C"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [410, 120]
+        Branch {
+          DstComponent  "R"
+          DstTerminal   2
+        }
+        Branch {
+          Points        [445, 120]
+          DstComponent  "Vout"
+          DstTerminal   1
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Vin"
+      SrcTerminal   2
+      Points        [120, 210; 235, 210]
+      Branch {
+        DstComponent  "FETD1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [360, 210]
+        Branch {
+          Points        [410, 210]
+          Branch {
+            Points        [445, 210]
+            DstComponent  "Vout"
+            DstTerminal   2
+          }
+          Branch {
+            DstComponent  "R"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          DstComponent  "C"
+          DstTerminal   2
+        }
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "iL"
+      SrcTerminal   3
+      Points        [335, 75]
+      DstComponent  "Scope"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vout"
+      SrcTerminal   3
+      Points        [460, 105; 360, 105; 360, 85]
+      DstComponent  "Scope"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Logical\nOperator"
+      SrcTerminal   1
+      DstComponent  "FETD1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Pulse\nGenerator"
+      SrcTerminal   1
+      Points        [155, 165]
+      Branch {
+        Points        [155, 90]
+        DstComponent  "FETD"
+        DstTerminal   3
+      }
+      Branch {
+        DstComponent  "Logical\nOperator"
+        DstTerminal   2
+      }
+    }
+    Annotation {
+      Name          "<html><body>\n<p><span style=\" font-weight:700;\">Nurhal"
+"izah Salzabia Tappi</span></p>\n<p><span style=\" font-weight:700;\">22/49404"
+"7/TK/54164</span></p></body></html>"
+      Position      [185, 45]
+    } 
+  }
+}
